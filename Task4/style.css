@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    /* Login colors */
+    --login-primary: #228cdc;
+    --login-secondary: #8e75e4;
+    --login-accent: #b52b79;
+    
+    /* Signup colors */
+    --signup-primary: #2a3d66;
+    --signup-secondary: #5d54a4;
+    --signup-accent: #9d65c9;
+    --signup-extra: #d789d7;
+    
+    --text-color: #333;
+    --light-text-color: #fff;
+    --background-color: #f0f4f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, var(--login-primary), var(--login-secondary));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    perspective: 1000px;
+    transition: background 0.8s ease;
+}
+
+.container {
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+}
+
+.card {
+    background-color: transparent;
+    width: 100%;
+    height: 500px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+h2 {
+    color: var(--login-primary);
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: var(--login-primary);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 2px solid var(--login-secondary);
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: #f7f8fc;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--login-primary);
+}
+
+.submit-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--login-primary);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--login-secondary);
+}
+
+.forgot-password {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.switch-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.toggle-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+    width: 250px; /* Adjust width as needed */
+    z-index: 10;
+    perspective: 1000px; /* Add perspective to the container */
+}
+
+.toggle-text {
+    font-weight: bold;
+    transition: all 0.3s ease;
+    backface-visibility: hidden; /* Prevent text from flipping */
+    padding: 0 10px; /* Add padding for spacing */
+}
+
+.toggle-text.login {
+    color: var(--login-primary);
+}
+
+.toggle-text.signup {
+    color: var(--text-color);
+}
+
+/* Style the toggle switch and label */
+.toggle-switch {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.toggle-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 60px;
+    height: 30px;
+    background: var(--login-primary);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    margin: 0 10px; /* Add margin for spacing */
+}
+
+.toggle-label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.toggle-switch:checked + .toggle-label {
+    background: var(--signup-accent);
+}
+
+.toggle-switch:checked + .toggle-label:after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+.toggle-label:active:after {
+    width: 40px;
+}
+
+.signup-mode {
+    background: linear-gradient(135deg, var(--signup-primary), var(--signup-secondary));
+}
+
+.card-back h2,
+.card-back .input-group i,
+.card-back .submit-btn {
+    color: var(--signup-primary);
+    border-color: var(--signup-secondary);
+}
+
+.card-back .input-group input {
+    color: var(--text-color);
+}
+
+.card-back .input-group input:focus {
+    border-color: var(--signup-accent);
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Calculator</h1>
+        <table>
+            <tr>
+                <th colspan="3"><input  id="result" readonly></th>
+                <td><input type="button" value="AC" class="op" onclick="clearDisplay()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" id="zero" onclick="calculate('0')"></td>
+                <td ><input type="button" value="." id="dot" onclick="calculate(value)"></td>
+                <td ><input type="button" value="/" id="percent" onclick="calculate(value)"></td>
+                <td><input type="button" value="*"  class="op"id="multiply" onclick="calculate(value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" id="four" onclick="calculate(value)"></td>
+                <td><input type="button" value="8" id="five" onclick="calculate(value)"></td>
+                <td><input type="button" value="9" id="six" onclick="calculate(value)"></td>
+                <td><input type="button" value="-" class="op" id="minus" onclick="calculate(value)"></td>
+            value
+            <tr>
+                <td><input type="button" value="4" id="four" onclick="calculate(value)"></td>
+                <td><input type="button" value="5" id="five" onclick="calculate(value)"></td>
+                <td><input type="button" value="6" id="six" onclick="calculate(value)"></td>
+                <td><input type="button" value="+" class="op" id ="plus" onclick="calculate(value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" id="one" onclick="calculate(value)"></td>
+                <td><input type="button" value="2" id="two" onclick="calculate(value)"></td>
+                <td><input type="button" value="3" id="three" onclick="calculate(value)"></td>
+                <td><input type="button" value="=" class="op" id="equal" onclick="finalCalculation()"></td>
+            </tr>
+        </table>
+    </main>
+    <script>
+        const display = document.getElementById('result');
+        function calculate(val){
+            display.value += val;
+        }
+        function clearDisplay(){
+            display.value = "";
+        }
+        function finalCalculation(){
+            let x = display.value;
+            let y = eval(x);
+            display.value = y;
+            
+        }
+
+    </script>
+</body>
+</html>

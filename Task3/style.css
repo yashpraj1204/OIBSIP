@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+}
+body{
+    background-color: #000;
+}
+.takeinput {
+    margin-top: 2rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 1rem;
+    justify-content: space-evenly;
+}
+.takeinput input{
+    height: 2rem;
+    width: 70%;
+    padding: 0.4rem;
+    border-top-left-radius:1rem ;
+    border-bottom-left-radius:1rem ;
+    border: solid;
+    border-right: none;
+    outline: none;
+    margin: 0;
+}
+.add{
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    margin: 0;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color:#000;
+}
+.container{
+    background-color: #fff;
+    width: 40%;
+    margin:250px auto;
+    border:solid;
+    box-shadow: 4px 3px 5px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+}
+.listcontainer{
+    border-top: solid;
+    margin-top: 2rem;
+    width: 100%;
+}
+.listcontainer ul {
+    display:  flex; 
+    list-style: none;
+    flex-direction: column;
+    
+}
+.taskstyle{
+    margin-left: 3rem;
+    flex: 1;
+}
+
+.li-settings{
+    border-bottom: solid 1px;
+    display: flex;  
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.divcheckcontainer{
+    padding: 0 2rem ;
+    border-right: solid 1px;
+    display: flex;
+    align-items: center;
+    height: 3.1rem;
+}
+.selectallcheckbox{
+    padding: 0 2rem ;
+    display: flex;
+    align-items: center;
+    height: 3.1rem;
+}
+#selectall{
+    display: flex;
+    justify-content: space-between;
+}
+.rall{
+    align-self: flex-end;
+    margin: 1rem ;
+    color: red;
+    padding: 0.1rem;
+}

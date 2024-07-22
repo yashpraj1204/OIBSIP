@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+header{
+    z-index: 10;
+    position: sticky;
+    top: 0px;
+    background: url(bg.jpg);
+    background-size: cover;
+}
+main{
+    z-index: -1;
+}
+body {
+    /* background: url(bg.jpg);
+    background-size: cover; */
+    background-color: black;
+    height: 100%;
+}
+body::-webkit-scrollbar{
+    background-color: black;
+    width: 5px;
+
+}
+body::-webkit-scrollbar-thumb{
+    background-color:red;
+    border-radius: 10px;
+}
+
+/* navbar start */
+.navbar {
+
+    height:max-content;
+    width: 100%;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    border-bottom: 2px solid red;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar p {
+    text-align: center;
+    letter-spacing: 2px;
+    border-bottom: solid rgb(251, 4, 4);
+}
+.navbar h1{
+    font-weight: 300;
+    border-bottom: solid rgb(161, 131, 131);
+}
+/* navbar end */
+
+/* main  */
+/* section 1 */
+.section1{
+    z-index: -2;
+    border-bottom:solid gray;
+    top: 100px;
+    height: max-content
+}
+h1{
+    text-align: center;
+    color: #dfd8d8;
+    border-bottom: solid gray;
+    margin: 0px;
+}
+.history-heading{
+    padding: 20px 0px;
+    text-align: center;
+    color: #dfd8d8;
+    border-bottom: solid gray;
+    margin: 0px;
+}
+.details  {
+    padding: 40px;
+    color: rgb(237, 240, 233);
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center ;
+
+}
+.quotes{
+    
+    width: 50%;
+}
+.quotes p{
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    font-family: "Playfair Display", serif;
+    
+}
+.info{
+   margin-bottom: 20px;
+}
+.history{
+    height: 500px;
+    overflow-y: scroll;
+    padding: 40px;
+}
+.batting-table{
+    margin-top: 3rem;
+    text-align: center;
+    background-color: rgba(223,232,223,0.1);
+}
+.batting-table table tr th,tr{
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    color: gray;
+    /* border-bottom: solid white; */
+}
+table tr span{
+    color: gray;
+    font-size: small;
+}
+.history::-webkit-scrollbar{
+    background-color: white;
+    width: 5px;
+}
+.history::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 10px;
+}
